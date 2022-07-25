@@ -1,0 +1,96 @@
+.about-page {
+    background: #000;
+    top: 0;
+    height: 100%;
+    .text-zone{
+        position: absolute;
+        left: 10%;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 550px;
+        vertical-align: middle;
+        h1{
+            font-size: 53px;
+            font-family: 'Coolvetica';
+            color: var(--decorado1-color);
+            font-weight: 400;
+            margin-top: 0;
+            position: relative;
+            margin-bottom: 40px;
+            left: 10px;
+
+            &::before{
+                content: '<h1>';
+                font-family: 'La Belle Aurore';
+                font-size: 18px;
+                position: absolute;
+                margin-top: 0%;
+                left: 40px;
+                opacity: 0.6;
+                line-height: 18px;
+            }
+            &::after{
+                content: "</h1>";
+                font-family: "La Belle Aurore";
+                font-size: 18px;
+                position: absolute;
+                margin-left: 20px;
+                margin-top: 70%;
+                left: 10px;                
+                opacity: 0.6;
+                line-height: 18px;
+            }
+        }
+        p{
+            color: #fff;
+            margin-top: 20px;
+            font-weight: 300;
+            font-size: 11px;
+            font-style: 13px;
+            font-family: sans-serif;
+            min-width: fit-content;
+            letter-spacing: 3px;
+            animation: pulse 1s;
+            &:nth-of-type(1){
+                animation-delay: 1.2s;
+            }
+            &:nth-of-type(2){
+                animation-delay: 1.4s;
+            }
+            &:nth-of-type(3){
+                animation-delay: 1.6s;
+            }
+        }
+    }
+    .text-animate-hover {
+        color: #fff;
+    }
+    .back-container{
+        z-index: -1;
+        .shadow
+        {
+            width: 100%;
+            height: 100%;
+            left: 60px;
+            bottom: 0;
+            position: fixed;
+            .back-anim{
+                width: 100%;
+                height: 100%;
+                filter: brightness(60%);
+            }
+        }
+        
+        .shadow:before
+        {
+            display:block;
+            content:'';
+            position:absolute;
+            width:100%;
+            height:100%;
+            -moz-box-shadow:inset 0px 0px 10px 10px #000;
+            -webkit-box-shadow:inset 0px 0px 10px 10px #000;
+            box-shadow:inset 0px 0px 10px 10px #000;
+        }
+    }
+}

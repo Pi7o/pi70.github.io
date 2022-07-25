@@ -1,15 +1,18 @@
 .home-page {
     .text-zone {
          position: absolute;
-         left:10%;
+         left:65px;
          top: 55%;
          transform: translateY(-50%);
-         width: 550px;
+         width: 500px;
          max-height: 90%;
     }
     h1 {
+        z-index: 3;
         color: #fff;
-        font-size: 43px;
+        font-size: 7.5vmin ;
+        position: relative;
+        left: 40px;
         margin: 0;
         font-family: 'Coolvetica';
         font-weight: 400;
@@ -31,9 +34,10 @@
             color: var(--decorado1-color);
             font-size: 18px;
             position: absolute;
-            margin-top: 50px;
-            margin-left: -270px;
+            margin-top: 10%;
+            margin-left: 20px;
             animation: fadeIn 1s 1.7s backwards;
+            left: 10%;
             opacity: 0.6;
         }
     }
@@ -41,11 +45,12 @@
 
 h2 {
     color: #8d8d8d;
+    width: 60%;
     margin-top: 20px;
     font-weight: 400;
     font-size: 11px;
     font-family: sans-serif;
-    letter-spacing: 3px;
+    letter-spacing: 0.1vw;
     animation: fadeIn 1s 1.8s backwards;
 }
 
@@ -65,7 +70,7 @@ h2 {
 
     &:hover{
         background: var(--decorado1-color);
-        color: #333;
+        color: #fff;
         
     }
 }

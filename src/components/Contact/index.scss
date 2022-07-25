@@ -4,23 +4,24 @@
     height: 100%;
     .text-zone{
         position: absolute;
-        left: 10%;
-        top: 50%;
+        left:65px;
+        top: 55%;
         transform: translateY(-50%);
-        width: 550px;
+        width: 80%;
         vertical-align: middle;
         h1{
-            font-size: 53px;
-            font-family: 'Coolvetica';
-            color: var(--decorado1-color);
-            font-weight: 400;
-            margin-top: 0;
+            z-index: 3;
+            color: #fff;
+            font-size: 7.5vmin ;
             position: relative;
-            margin-bottom: 40px;
-            left: 10px;
+            left: 40px;
+            margin: 0;
+            font-family: 'Coolvetica';
+            font-weight: 400;
 
             &::before{
                 content: '<h1>';
+                color: var(--decorado1-color);
                 font-family: 'La Belle Aurore';
                 font-size: 18px;
                 position: absolute;
@@ -31,9 +32,10 @@
             }
             &::after{
                 content: "</h1>";
+                color: var(--decorado1-color);
                 font-family: "La Belle Aurore";
                 font-size: 18px;
-                position: absolute;
+                position: initial;
                 margin-left: 20px;
                 margin-top: 30%;
                 left: 10px;                
@@ -45,11 +47,10 @@
             color: #fff;
             margin-top: 20px;
             font-weight: 300;
-            font-size: 11px;
-            font-style: 13px;
+            font-size: 2vmin;
             font-family: sans-serif;
             min-width: fit-content;
-            letter-spacing: 3px;
+            letter-spacing: 0.2vmin;
             animation: pulse 1s;
             &:nth-of-type(1){
                 animation-delay: 1.2s;

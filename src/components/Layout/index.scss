@@ -5,21 +5,24 @@
 }
 
 .top-tags{
+    z-index: 1;
     bottom:auto;
     top: 35px;
 }
 
 .tags {
+    z-index: 2;
     color: var(--decorado1-color);
     opacity: 0.6;
     position: absolute;
     bottom: 0;
     left: 120px;
-    font-size: 10px;
+    font-size: 20px;
     font-family: 'La Belle Aurore';
 }
 
 .bottom-tag-html {
+    z-index: 1;
     margin-left: -20px;
 }
 
@@ -32,13 +35,15 @@
     opacity: 0;
     top: 5%;
     margin: 0 auto;
-    z-index: 1;
     transform-style: preserve-3d;
     animation: fadeIn 1s forwards;
     animation-delay: 1s;
 }
 
-.about-page {
+.about-page, .contact-page {
+    background: #000;
+    top: 0;
+    height: 100%;
     .text-zone{
         position: absolute;
         left: 10%;
@@ -46,7 +51,6 @@
         transform: translateY(-50%);
         width: 550px;
         vertical-align: middle;
-        max-height: 90%;
         h1{
             font-size: 53px;
             font-family: 'Coolvetica';
@@ -62,19 +66,18 @@
                 font-family: 'La Belle Aurore';
                 font-size: 18px;
                 position: absolute;
-                margin-top: -10%;
-                left: -10px;
+                margin-top: 0%;
+                left: 40px;
                 opacity: 0.6;
                 line-height: 18px;
             }
             &::after{
-                content: '</h1>';
-                font-family: 'La Belle Aurore';
+                content: "</h1>";
+                font-family: "La Belle Aurore";
                 font-size: 18px;
                 position: absolute;
-                margin-top: -10%;
-                left:  40px;
-                bottom: -20px;
+                margin-left: 20px;
+                left: 10px;                
                 opacity: 0.6;
                 line-height: 18px;
             }
@@ -95,9 +98,68 @@
             &:nth-of-type(2){
                 animation-delay: 1.4s;
             }
+            &:nth-of-type(3){
+                animation-delay: 1.6s;
+            }
         }
     }
     .text-animate-hover {
         color: #fff;
+    }
+    .back-container{
+        z-index: -1;
+        width: 90%;
+        height: auto;
+        position: absolute;
+        top: initial;
+        left: 80px;
+        bottom: -50%;
+        right: 100%;
+        margin: auto;
+        .shadow
+        {
+            width: 100%;
+            height: auto;
+            bottom: 0;
+            display:block;
+            position: absolute;
+            .back-anim{
+                width: 100%;
+                height: auto;
+                bottom: 0;
+                filter: brightness(90%)
+            }
+        }
+        
+        .shadow:before
+        {
+            display:block;
+            content:'';
+            position:absolute;
+            width:100%;
+            height:100%;
+            -moz-box-shadow:inset 0px 0px 10px 10px #000;
+            -webkit-box-shadow:inset 0px 0px 10px 10px #000;
+            box-shadow:inset 0px 0px 10px 10px #000;
+        }
+    }
+}
+.about-page {
+    .text-zone{
+        h1{
+            &::after{
+                margin-top: 70%;
+            }
+        }
+    }
+}
+.contact-page {
+    .text-zone{
+        h1{
+            &::after{
+                margin-top: 30%;
+            }
+        }
+        
     }
 }

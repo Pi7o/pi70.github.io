@@ -1,6 +1,8 @@
 import './index.scss'
 import React, { useEffect, useState } from 'react';
-import AnimatedLetters from '../AnimatedLetters'
+import Loader from 'react-loaders';
+import AnimatedLetters from '../AnimatedLetters';
+import Backanim from '../../assets/images/Biker.webp';
 
 
 const About = () => {
@@ -13,6 +15,7 @@ const About = () => {
   }, [])
 
   return (
+    <>
     <div className='container about-page'>
         <div className='text-zone'>
             <h1>
@@ -31,8 +34,18 @@ const About = () => {
                 Yo busco poder obtener experiencia en programación de sistemas back-end pero también no tengo problemas en tener
                  la oportunidad de realizar programación para front-end.
             </p>
+            <p>
+            También soy un aficionado del arte 2D como el modelado 3D y  del desarrollo de videojuegos, estos forman parte de mi hobby.
+            </p>
+        </div>
+        <div className='back-container'>
+          <div className="shadow">
+            <img className='back-anim' src={Backanim} alt='biker' />
+          </div>
         </div>
     </div>
+    <Loader type='pacman' />
+    </>
   )
 }
 

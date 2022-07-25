@@ -1,6 +1,4 @@
 .home-page {
-    z-index: 1;
-
     .text-zone {
          position: absolute;
          left:10%;
@@ -17,24 +15,24 @@
         font-weight: 400;
 
         &::before{
-            content: '<h1>';
-            font-family: 'La Belle Aurore';
+            content: "<h1>";
+            font-family: "La Belle Aurore";
             color: var(--decorado1-color);
             font-size: 18px;
             position: absolute;
             margin-top: -40px;
-            left: 15px;
+            left: 50px;
             opacity: 0.6;
         }
 
         &::after{
-            content: '<h1/>';
-            font-family: 'La Belle Aurore';
+            content: "<h1/>";
+            font-family: "La Belle Aurore";
             color: var(--decorado1-color);
             font-size: 18px;
             position: absolute;
-            margin-top: 18px;
-            margin-left: 20px;
+            margin-top: 50px;
+            margin-left: -270px;
             animation: fadeIn 1s 1.7s backwards;
             opacity: 0.6;
         }
